@@ -1,0 +1,28 @@
+---
+import "@/styles/filepath.css";
+
+const { type = "file" } = Astro.props;
+
+const { pathname } = Astro.url;
+const segments = pathname.split("/").filter(Boolean);
+
+const crumbs = [
+  { label: "~/", href: "/", current: false },
+  ...segments.map((segment, i) => ({
+    label: i === segments.length - 1 && type === "file" ? segment : `${segment}/`,
+    href: `/${segments.slice(0, i + 1).join("/")}`,
+    current: i === segments.length - 1,
+  })),
+];
+---
+
+<nav class="filepath" aria-label="Breadcrumb"
+  >{crumbs.map((crumb) =>
+    crumb.current ? (
+      <span class="current" aria-current="page">{crumb.label}</span>
+    ) : (
+      <a href={crumb.href}>{crumb.label}</a>
+    ),
+  )}</nav
+>
+

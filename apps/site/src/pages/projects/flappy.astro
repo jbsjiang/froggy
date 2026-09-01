@@ -1,0 +1,48 @@
+---
+import MainLayout from "@/layouts/MainLayout.astro";
+import FilePath from "@/components/FilePath.astro";
+import "@froggy/flappy/styles.css";
+---
+
+<MainLayout title="Flappy — Jason" description="Flappy Bird clone with a neuroevolution AI that learns to play on its own.">
+  <FilePath />
+
+  <div id="stage">
+    <div class="game-column">
+      <canvas id="canvas" width="480" height="640"></canvas>
+    </div>
+
+    <div class="ai-side" id="ai-side">
+      <aside class="ai-panel" id="ai-panel">
+        <button id="ai-toggle" type="button">AI Mode: Off (N)</button>
+        <div class="ai-mode-hint">
+          Turn on AI mode to evolve a population of birds that learn to play
+          on their own.
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <script>
+    import { mountFlappy } from "@froggy/flappy";
+
+    const canvas = document.querySelector<HTMLCanvasElement>("#canvas");
+    if (!canvas) {
+      throw new Error("Canvas element #canvas not found");
+    }
+
+    canvas.addEventListener("contextmenu", (event) => {
+      event.preventDefault();
+    });
+
+    mountFlappy(canvas);
+  </script>
+
+  <style>
+    #stage {
+      min-height: 100dvh;
+      align-content: center;
+      padding: 1rem 0;
+    }
+  </style>
+</MainLayout>

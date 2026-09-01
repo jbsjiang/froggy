@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flappy</title>
+    <link rel="stylesheet" href="/src/styles.css">
+</head>
+
+<body>
+    <div id="stage">
+        <div class="game-column">
+            <canvas id="canvas" width="480" height="640" oncontextmenu="event.preventDefault()"></canvas>
+        </div>
+
+        <div class="ai-side" id="ai-side">
+            <aside class="ai-panel" id="ai-panel">
+                <button id="ai-toggle" type="button">AI Mode: Off (N)</button>
+                <div class="ai-mode-hint">
+                    Turn on AI mode to evolve a population of birds that learn
+                    to play on their own.
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>

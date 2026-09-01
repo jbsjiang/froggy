@@ -1,0 +1,27 @@
+.filepath {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 10;
+  padding: 0.4rem 0.9rem;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: #fff;
+}
+
+.filepath a {
+  color: var(--accent-bright);
+  text-decoration: none;
+}
+
+.filepath .current {
+  color: #fff;
+}
+
+.filepath a:hover {
+  text-decoration: underline;
+}

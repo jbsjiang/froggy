@@ -1,0 +1,58 @@
+---
+import MainLayout from "@/layouts/MainLayout.astro";
+import FilePath from "@/components/FilePath.astro";
+
+const posts = [
+  {
+    title: "Fossil Fuels and Running Out",
+    description:
+      "Why the Reserves to Production Ratio suggests we are not about to run out of non-renewable resources.",
+    href: "/blog/bbe1",
+    tag: "Biorenewables",
+  },
+];
+---
+
+<MainLayout title="Blog — Jason" description="Posts by Jason.">
+  <FilePath type="dir" />
+  <section class="section">
+    <div class="container container-narrow">
+      <h1>Blog</h1>
+      <ul class="posts">
+        {
+          posts.map((post) => (
+            <li>
+              <a class="card" href={post.href}>
+                <span class="card-tag">{post.tag}</span>
+                <h2>{post.title}</h2>
+                <p>{post.description}</p>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+</MainLayout>
+
+<style>
+  .container-narrow {
+    width: min(45rem, 100% - 2.5rem);
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .posts {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 1rem;
+  }
+
+  .card h2 {
+    font-size: 1.2rem;
+  }
+</style>

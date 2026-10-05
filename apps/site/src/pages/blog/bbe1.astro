@@ -1,0 +1,76 @@
+---
+import MainLayout from "@/layouts/MainLayout.astro";
+import FilePath from "@/components/FilePath.astro";
+---
+
+<MainLayout
+  title="Fossil Fuels and Running Out — Jason"
+  description="Why the Reserves to Production Ratio suggests we are not about to run out of non-renewable resources."
+>
+  <FilePath />
+  <section class="section">
+    <div class="container container-narrow">
+      <article class="post">
+        <header class="post-header">
+          <p class="post-tag">Biorenewables</p>
+          <h1>Fossil Fuels and Running Out</h1>
+        </header>
+
+        <p>Whenever the discussion of fossil fuels and renewable resources comes up, I always think about the finite nature of how fossil fuels work. Every time in the past I was always worried about how they would eventually run out. It really is a horrifying thought that the earth would become barren of the resources that we have all built our civilization around. But I want to bring up something that I learned recently which is that that desolate wasteland nightmare is not something that would ever happen.</p>
+
+        <p>That something is the Reserves to Production Ratio which is a metric that is very useful when it comes to measuring how quickly we are to run out of a particular resource. The ratio is calculated by dividing the total proven reserves by the current consumption rate. Long story short this ratio estimates how much material we currently have access to and how much of it we are consuming, so the ratio refers to how long our current stockpile of resources will last. And working on the analysis of this ratio over the course of the previous few years on some key non-renewable resources such as oil show that this ratio is staying consistent over time, which means that we are not even close to actually delepting our supply.</p>
+
+        <h2>So how is this even possible?</h2>
+
+        <p>If those resources are non regenerative, would that mean that if we have some consumption then we would eventually deplete the supply? Well technically yes, but there is an important difference between proven reserves and the total amount of resource that is actually in the earth. This is one half of what makes it possible for these limited resources to last us almost forever. Proven reserve is the amount of a resource that we can actually access if we wanted to. In the case of oil this would mean how much oil we know that is in the ground that we could mine out if we wanted to. So because this is based on how much knowledge we have about that resource, this number can grow over time. As technology advances for better surveying methods and deeper scanning systems, we are able to prove there is more and more oil in the earth that we can access.</p>
+
+        <p>The other half of the equation is the consumption of that resource. This is also not a fixed value, it can change depending on how many people there are and their lifestyles. So movements that push towards green alternatives to oil and gas, will in turn reduce the consumption of oil. While then will increase the ratio of reserve to consumption. So somewhere on the curve it is possible that as a civilization we will gain access to more and more oil while also changing our habits to use less and less of it. This results in technology and environmental awareness allowing us to not run out of these critical resources that are non renewable.</p>
+
+        <h2>So We Are Totally Fine?</h2>
+
+        <p>Well almost, the data points at us not having a problem in the future where we run out of materials, but that does not mean that everything will be perfect. The extraction of materials, especially mining, can come with other environmental harms. So this means that because of the advancement of technology, the future is not horribly ruined where the world will be stripped of resources, rather resources will remain plentiful with more focus on sustainable methods of extraction.</p>
+      </article>
+    </div>
+  </section>
+</MainLayout>
+
+<style>
+  .container-narrow {
+    width: min(45rem, 100% - 2.5rem);
+  }
+
+  .post-header {
+    margin-bottom: 2rem;
+  }
+
+  .post-tag {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .post h1 {
+    font-size: 2.25rem;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+
+  .post h2 {
+    font-size: 1.4rem;
+    margin-top: 2.25rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .post p {
+    margin-bottom: 1.25rem;
+    line-height: 1.7;
+    color: var(--fg);
+  }
+
+  .post > *:last-child {
+    margin-bottom: 0;
+  }
+</style>

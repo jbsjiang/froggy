@@ -1,0 +1,221 @@
+---
+import { Image } from "astro:assets";
+import MainLayout from "@/layouts/MainLayout.astro";
+import FilePath from "@/components/FilePath.astro";
+import logPile from "@/assets/blog/bbe2/log-pile.jpg";
+import nothingIsWasted from "@/assets/blog/bbe2/nothing-is-wasted.jpg";
+import forestManagementCycle from "@/assets/blog/bbe2/forest-management-cycle.png";
+import fscSfi from "@/assets/blog/bbe2/fsc-sfi.jpg";
+
+const sizes = "(min-width: 770px) 720px, calc(100vw - 40px)";
+---
+
+<MainLayout
+  title="Trees and Biorenewability — Jason"
+  description="What I learned about wood properties, tree plantations, and certifications, and why wood can be a responsibly harvested resource."
+>
+  <FilePath />
+  <section class="section">
+    <div class="container container-narrow">
+      <article class="post">
+        <header class="post-header">
+          <p class="post-tag">Biorenewables</p>
+          <h1>Trees and Biorenewability</h1>
+        </header>
+
+        <p>After learning about how biorenewable materials are obtained I want to write a bit about the things that I have learned about wood, both because I think paper and wood products are such a prevalent part of our lives while also appearing to be the solution to all the biorenable problems. This is mostly focused towards friends who are in similar positions that I am in where I did not know very much about how deep of a topic of responsibly harvesting wood is.</p>
+
+        <figure>
+          <Image
+            src={logPile}
+            alt="A stack of cut logs with mossy bark and visible growth rings on the cut ends."
+            widths={[720, 1024]}
+            sizes={sizes}
+          />
+        </figure>
+
+        <h2>Wood as a wonderful resource</h2>
+
+        <p>Firstly I want to talk a bit about the properties of wood that I learned about. Wood from the trunks of trees have different properties and are made of different types of cells depending on which part they are. The heart wood in the center of the tree will have different uses compared to the sapwood or bark that is on the outside of the tree.</p>
+
+        <p>Biologically speaking the different parts create the complex organism that makes for a strong tree, but this is also great from the perspective of humans who want to use that wood to create products that are useful. With different parts of the tree being better suited for different outpaces, such as the heartwood being more resistant to bugs or rotting, the outer layers being better for cutting into planks, and the bark better to burn for energy <a class="cite" href="#wc-wood-properties">(Wood Properties)</a>.</p>
+
+        <figure>
+          <a href={nothingIsWasted.src} target="_blank" rel="noopener">
+            <Image
+              src={nothingIsWasted}
+              alt="GreenSource infographic reading “Nothing is wasted” and “Wood fibre is circular”, showing how a harvested tree becomes sawn timber, wood-based panels, pulp, paper and board, wooden construction, and renewable energy."
+              widths={[720, 1440]}
+              sizes={sizes}
+            />
+          </a>
+          <figcaption>Click the image to view it full size.</figcaption>
+        </figure>
+
+        <p>This actually creates this really cool situation where the lumber industry doesn’t create very much waste. That’s because even shavings and sawdust that is created during simply cutting the wood can be used to create useful products such as paper. Some sources even report up to 98% of all the harvested wood being used <a class="cite" href="#wc-generation-and-recovery">(Generation and Recovery)</a>. That is a metric that sounds really good especially considering biorenewability as waste and residual is a contributor to the cost of using any material.</p>
+
+        <h2>Tree Plantations</h2>
+
+        <p>One thing that actually concerns me about wood production is the thought of deforestation. I have seen many nature documentaries that show scenes of entire forests getting leveled, leaving just bare dirt in a previously wildlife filled ecosystem.</p>
+
+        <figure>
+          <Image
+            src={forestManagementCycle}
+            alt="The Sustainable Forest Management Cycle: a loop of icons showing a checklist, hands planting a seedling, a stand of trees, people planting a tree, and a cut log, set over a forested mountain backdrop."
+            widths={[720, 1440]}
+            sizes={sizes}
+          />
+        </figure>
+
+        <p>But there are actually solutions to that problem. Through this class I learned that it is easy to grow trees responsibly so that wood can be harvested year after year without permanently destroying forests. There in fact is an entire field of forestry dedicated to research on best practices for maintaining human grown tree plantations to minimize the ecological impact of harvesting trees.</p>
+
+        <p>Through those plantation processes, we actually closely imitate the settings for a natural forest while also being able to get the wood that we want. This means that wildlife is not nearly as affected as their natural habitats are actually still around for most of the time. In one of those systems forests will exist in a mostly untouched but maintained state for about 60 years, with disturbances for logging only happening one year out of those 60. This is a huge improvement over destroying habitats and never returning it back to the ecosystem <a class="cite" href="#wc-natural-vs-plantation">(Natural Vs. Plantation Forests)</a>.</p>
+
+        <h2>Certified Trees</h2>
+
+        <figure class="figure-logo">
+          <Image
+            src={fscSfi}
+            alt="The FSC and SFI forest certification logos."
+          />
+        </figure>
+
+        <p>Lastly, another important point when it comes to responsible tree harvesting is certifications. Because while all the practices that we just learned about are great for the environment, there is no guarantee that every single tree farmer is going to do the right thing.</p>
+
+        <p>That is where certifications come in. They are from third party certification groups that will check the tree farmers to see if they are doing the proper procedures and considerations for the environment. Because they are a third party who is unrelated to the actual plantation owners, these certifications are an unbiased reflection of the good work that environmentally conscious tree farmers are doing <a class="cite" href="#wc-sustainability-certification">(Sustainability Certification for Wood)</a>.</p>
+
+        <p>So as concurmers we actually have one important job, and that is checking to see if the wood we are buying are coming from certified sources. By making sure we get wood from certified producers we are ensuring that tree farmers are actually doing the right thing and making the right decisions for a more renewable future.</p>
+
+        <section class="works-cited" aria-labelledby="works-cited-heading">
+          <h2 id="works-cited-heading">Works Cited</h2>
+          <ul class="works-list" role="list">
+            <li id="wc-generation-and-recovery">
+              “Generation and Recovery of Solid Wood Waste in the U.S..” BioCycle, 15 Aug. 2012, <a href="https://www.biocycle.net/generation-and-recovery-of-solid-wood-waste-in-the-u-s/">https://www.biocycle.net/generation-and-recovery-of-solid-wood-waste-in-the-u-s/</a>. Accessed 25 Oct. 2026.
+            </li>
+            <li id="wc-natural-vs-plantation">
+              “Natural Vs. Plantation Forests: Understanding Forest Management.” <cite>American Forest Management</cite>, 2025, <a href="https://www.americanforestmanagement.com/news/is-that-a-forest">https://www.americanforestmanagement.com/news/is-that-a-forest</a>. Accessed 25 Oct. 2026.
+            </li>
+            <li id="wc-epis">
+              “Sustainable Forest Management Ensures Biodiversity Protection – EPIS.” Epis.Org, 13 Mar. 2024, <a href="https://epis.org/sustainable-forest-management-ensures-biodiversity-protection/">https://epis.org/sustainable-forest-management-ensures-biodiversity-protection/</a>. Accessed 25 Oct. 2026.
+            </li>
+            <li id="wc-pro-carton">
+              “Sustainable Forest Management - Pro Carton.” Pro Carton, 20 Mar. 2023, <a href="https://www.procarton.com/why-cartons/sustainable-forest-management/">https://www.procarton.com/why-cartons/sustainable-forest-management/</a>. Accessed 25 Oct. 2026.
+            </li>
+            <li id="wc-sustainability-certification">
+              “Sustainability Certification for Wood: FSC Vs SFI.” One Earth Body Care, <a href="https://oneearthbodycare.com/blog/sustainability-certification-for-wood-fsc-vs-sfi/">https://oneearthbodycare.com/blog/sustainability-certification-for-wood-fsc-vs-sfi/</a>. Accessed 25 Oct. 2026.
+            </li>
+            <li id="wc-wood-properties">
+              “Wood Properties – BuildInWood.” Build-in-Wood.Eu, 2016, <a href="https://design-guide.build-in-wood.eu/wood-properties/">https://design-guide.build-in-wood.eu/wood-properties/</a>. Accessed 25 Oct. 2026.
+            </li>
+          </ul>
+        </section>
+      </article>
+    </div>
+  </section>
+</MainLayout>
+
+<style>
+  .container-narrow {
+    width: min(45rem, 100% - 2.5rem);
+  }
+
+  .post-header {
+    margin-bottom: 2rem;
+  }
+
+  .post-tag {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .post h1 {
+    font-size: 2.25rem;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+
+  .post h2 {
+    font-size: 1.4rem;
+    margin-top: 2.25rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .post p {
+    margin-bottom: 1.25rem;
+    line-height: 1.7;
+    color: var(--fg);
+  }
+
+  .post > *:last-child {
+    margin-bottom: 0;
+  }
+
+  .post figure {
+    margin: 2rem 0;
+  }
+
+  .post figure :global(img) {
+    width: 100%;
+    height: auto;
+    margin-inline: auto;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+  }
+
+  .post figure a {
+    display: block;
+  }
+
+  .post figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--muted);
+    text-align: center;
+  }
+
+  .post .figure-logo :global(img) {
+    width: auto;
+    padding: 1rem;
+    background: #fff;
+  }
+
+  .cite {
+    color: var(--muted);
+    text-decoration: none;
+  }
+
+  .cite:hover {
+    color: var(--accent);
+    text-decoration: underline;
+  }
+
+  .works-cited {
+    margin-top: 3rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .works-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .works-list li {
+    padding-left: 2rem;
+    text-indent: -2rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    overflow-wrap: anywhere;
+    scroll-margin-top: 4rem;
+  }
+
+  .works-list li:target {
+    background: color-mix(in srgb, var(--accent) 12%, transparent);
+    border-radius: 6px;
+  }
+</style>

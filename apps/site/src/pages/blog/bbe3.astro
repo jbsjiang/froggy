@@ -1,0 +1,199 @@
+---
+import { Image } from "astro:assets";
+import MainLayout from "@/layouts/MainLayout.astro";
+import FilePath from "@/components/FilePath.astro";
+import sawmillProcess from "@/assets/blog/bbe3/sawmill-process.jpg";
+import engineeredWoodProducts from "@/assets/blog/bbe3/engineered-wood-products.png";
+import carbonCycle from "@/assets/blog/bbe3/carbon-cycle.jpg";
+
+const sizes = "(min-width: 770px) 720px, calc(100vw - 40px)";
+---
+
+<MainLayout
+  title="Wood: the Pluses, the Minuses, and the Neutrals — Jason"
+  description="What I learned about sawmills, engineered wood products, and carbon debt, and why wood is not an automatic fix for the environment."
+>
+  <FilePath />
+  <section class="section">
+    <div class="container container-narrow">
+      <article class="post">
+        <header class="post-header">
+          <p class="post-tag">Biorenewables</p>
+          <h1>Wood: the Pluses, the Minuses, and the Neutrals</h1>
+        </header>
+
+        <p>Another unit in the class of biorenewables and we covered in quite a lot of detail my favorite material, wood. I grew up in an age when most shopping bags and packaging were made of plastics, and the recent movement to move back towards paper bags and recycled paper packaging is something that makes me really happy. Other than just feeling more natural and grounded material, it was always pushed that paper was the more environmentally green material compared to the plastics that are so harmful to sea turtles and landfills. So when we covered wood I have gained more appreciation but have also learned more about the decisions on how wood can be beneficial to the environment.</p>
+
+        <h2>Complexities of Sawmills</h2>
+
+        <p>One of the things that needs to be taken into consideration when weighing the effects of wood and paper is where it comes from. We had previously covered tree plantations and how trees are cultivated in a sustainable way, but production, the actual process of converting timber into usable products such as paper and wood beams make up the majority of the environmental costs of wood.</p>
+
+        <p>This actually makes the process of cutting up the trees to be a very important part of the entire process of making wood products environmentally beneficial. With efficient systems in sawmills, the savings in ecological coasts can be maximized. And this is actually something that we learned quite a lot about in class where each part of a tree is optimized as much as possible to maximize the amount of usable product while minimizing the waste and effort needed to cut the tree up <a class="cite" href="#wc-log-to-plank">(From Log to Plank)</a>.</p>
+
+        <figure>
+          <a href={sawmillProcess.src} target="_blank" rel="noopener">
+            <Image
+              src={sawmillProcess}
+              alt="Diagram titled “The sawmill process from forest to sawn wood product”. Orange arrows lead from timber sorting, stickering and stacking through infeed and size sorting, debarking (producing bark), sawing (producing chips and shavings), drying, destacking, trimming and grading, wrapping and packaging, and warehousing, to loading onto trucks, trains and ships."
+              widths={[720, 980]}
+              sizes={sizes}
+            />
+          </a>
+          <figcaption>Click the image to view it full size.</figcaption>
+        </figure>
+
+        <h2>Engineered wood products</h2>
+
+        <p>Another thing that I learned that is pretty cool when it comes to wood products is the sheer versatility of wood as a building material. Wood is already incredibly flexible in how it can be used as just the wooden planks that you can buy from a hardware store or how after some processing you can get paper out of wood. But with even more engineering and processing wood can be turned into engineered wood which can have far better properties for structural power compared to just plain wood <a class="cite" href="#wc-engineered-wood-products">(Engineered Wood Products)</a>. Another benefit is in creating extra wide boards that no tree could naturally grow to fit <a class="cite" href="#wc-wood-and-engineered">(Wood and Engineered Wood Products)</a>. In fact using engineered wood products buildings made of wood can reach heights that would normally only be achievable by steel skyscrapers such as over 20 stories.</p>
+
+        <figure>
+          <a href={engineeredWoodProducts.src} target="_blank" rel="noopener">
+            <Image
+              src={engineeredWoodProducts}
+              alt="A ring of engineered wood products arranged around a pile of logs, each connected by an arrow: cross laminated timber, nail laminated timber, dowel laminated timber, plywood, laminated veneer lumber, parallel strand lumber, laminated or oriented strand lumber, oriented strand board, wood plastic composite, wood cement fiberboard, finger-jointed lumber, and glue laminated timber."
+              widths={[720]}
+              sizes={sizes}
+            />
+          </a>
+          <figcaption>Click the image to view it full size.</figcaption>
+        </figure>
+
+        <h2>Carbon debt and carbon neutral</h2>
+
+        <p>But using wood does not automatically mean that we have fixed all the environmental issues that affect our planet. In fact the topic is a lot more complex than just that. When it comes to carbon debt and taming our carbon emissions it makes sense to think that growing trees actually takes carbon out of the environment and moves it into wood. And normally you would just stop there and say that growing trees is actually removing carbon, but that does not look at the entire picture. After wood is harvested or if a tree dies, the wood then decays, which reemits carbon into the atmosphere <a class="cite" href="#wc-forest-carbon">(Forest Carbon)</a>. This results in trees being carbon neutral, any carbon they absorb when they are living is released back into the environment after the wood decomposes.</p>
+
+        <p>And to add some more complexity to this, the harvesting and processing of that wood requires energy which means the entire end to end use of wood actually releases carbon into the atmosphere. So using move trees and more wood is not the green solution that will solve the greenhouse gas emissions the current climate is facing.</p>
+
+        <figure>
+          <Image
+            src={carbonCycle}
+            alt="Infographic titled “The Carbon Cycle: forests are part of a living system”. Arrows loop between a CO2 cloud, growing trees that sequester CO2, and decaying trees that emit CO2. Text explains that carbon dioxide is continually sequestered from and emitted to the Earth’s atmosphere, that CO2 is a greenhouse gas that traps heat, and that biological carbon sequestration is when CO2 is captured from the atmosphere and stored in the natural environment."
+            widths={[720]}
+            sizes={sizes}
+          />
+        </figure>
+
+        <section class="works-cited" aria-labelledby="works-cited-heading">
+          <h2 id="works-cited-heading">Works Cited</h2>
+          <ul class="works-list" role="list">
+            <li id="wc-growing-carbon-offsets">
+              Doerr Admin, Stanford. “Growing Carbon Offsets on Trees.” <cite>Stanford Doerr School of Sustainability</cite>, 29 Aug. 2017, <a href="https://sustainability.stanford.edu/news/growing-carbon-offsets-trees/">https://sustainability.stanford.edu/news/growing-carbon-offsets-trees/</a>. Accessed 8 Nov. 2026.
+            </li>
+            <li id="wc-log-to-plank">
+              “From Log to Plank.” <cite>Swedish Wood</cite>, <a href="https://www.swedishwood.com/wood-facts/about-wood/from-log-to-plank/">https://www.swedishwood.com/wood-facts/about-wood/from-log-to-plank/</a>. Accessed 8 Nov. 2026.
+            </li>
+            <li id="wc-wood-and-engineered">
+              Gong, Meng. “Wood and Engineered Wood Products: Stress and Deformation.” <cite>Www.Intechopen.Com</cite>, IntechOpen, 2021, <a href="https://www.intechopen.com/chapters/79485">https://www.intechopen.com/chapters/79485</a>. Accessed 8 Nov. 2026.
+            </li>
+            <li id="wc-forest-carbon">
+              Natural Resources Canada. “Forest Carbon - Natural Resources Canada.” <cite>Canada.Ca</cite>, 2020, <a href="https://natural-resources.canada.ca/climate-change/forest-carbon">https://natural-resources.canada.ca/climate-change/forest-carbon</a>. Accessed 8 Nov. 2026.
+            </li>
+            <li id="wc-engineered-wood-products">
+              RobSimmons. “An Overview of Engineered Wood Products | Nisbet Brower.” <cite>Nisbet Brower</cite>, 9 Oct. 2023, <a href="https://www.nisbetbrower.com/post/overview-of-engineered-wood-products">https://www.nisbetbrower.com/post/overview-of-engineered-wood-products</a>. Accessed 8 Nov. 2026.
+            </li>
+          </ul>
+        </section>
+      </article>
+    </div>
+  </section>
+</MainLayout>
+
+<style>
+  .container-narrow {
+    width: min(45rem, 100% - 2.5rem);
+  }
+
+  .post-header {
+    margin-bottom: 2rem;
+  }
+
+  .post-tag {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .post h1 {
+    font-size: 2.25rem;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+
+  .post h2 {
+    font-size: 1.4rem;
+    margin-top: 2.25rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .post p {
+    margin-bottom: 1.25rem;
+    line-height: 1.7;
+    color: var(--fg);
+  }
+
+  .post > *:last-child {
+    margin-bottom: 0;
+  }
+
+  .post figure {
+    margin: 2rem 0;
+  }
+
+  .post figure :global(img) {
+    width: 100%;
+    height: auto;
+    margin-inline: auto;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+  }
+
+  .post figure a {
+    display: block;
+  }
+
+  .post figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--muted);
+    text-align: center;
+  }
+
+  .cite {
+    color: var(--muted);
+    text-decoration: none;
+  }
+
+  .cite:hover {
+    color: var(--accent);
+    text-decoration: underline;
+  }
+
+  .works-cited {
+    margin-top: 3rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .works-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .works-list li {
+    padding-left: 2rem;
+    text-indent: -2rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    overflow-wrap: anywhere;
+    scroll-margin-top: 4rem;
+  }
+
+  .works-list li:target {
+    background: color-mix(in srgb, var(--accent) 12%, transparent);
+    border-radius: 6px;
+  }
+</style>
